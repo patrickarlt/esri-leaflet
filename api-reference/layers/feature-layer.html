@@ -118,6 +118,13 @@
 <div class="main-content">
   <h1 id="l-esri-layers-featurelayer">L.esri.Layers.FeatureLayer</h1>
 <p><code>L.esri.Layer.FeatureLayer</code> is used to visualize and query vector geographic data hosted in ArcGIS Feature Layers. These layers are hosted as a part of Feature Services on either ArcGIS Online or ArcGIS Server.</p>
+<p>Feature Layers are provided by Feature Services which can contain multupile layers. Feature Layers expose vector geographic information as a web service that can be visualized, styled, queried and edited.</p>
+<p>Here is a sample Feature Service URL </p>
+<pre><code>http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Neighborhoods_pdx/</code></pre>
+<p>FeatureServer<code>note that it ends in</code>/FeatureService`. This particular service contains only 1 Feature Layer </p>
+<pre><code>http://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Neighborhoods_pdx/FeatureServer/0</code></pre>
+<p>Note that the Feature Layer url ends in <code>/FeatureService/{LAYER_ID}</code>.</p>
+<p>You can create a new empty feature service witha  single layer on the <a href="https://developers.arcgis.com/en/hosted-data/#/new">ArcGIS for Devleopers website</a> or you can use ArcGIS Online to <a href="https://developers.arcgis.com/tools/csv-to-feature-service/">create a Feature Service from a CSV or Shapefile</a>.</p>
 <h3 id="constructor">Constructor</h3>
 <table>
     <thead>
@@ -396,7 +403,7 @@ L.esri.basemapLayer(<span class="string">"Streets"</span>).addTo(map);
 
 <span class="keyword">var</span> busStops = L.esri.featureLayer(<span class="string">'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/stops/FeatureServer/0/'</span>).addTo(map);</code></pre>
 
-  <p><a href="http://github.com/esri/esri-leaflet/edit/beta5/site/source/pages/api-reference/layers/feature-layer.md">Edit this page on GitHub</a></p>
+  <p><a href="http://github.com/esri/esri-leaflet/edit/master/site/source/pages/api-reference/layers/feature-layer.md">Edit this page on GitHub</a></p>
 </div>
   <div style='clear:both;'></div>
 </div>
