@@ -985,7 +985,7 @@ L.esri.Tasks.query = function(url, params){
           }
         },
         DarkGray: {
-          urlTemplate: tileProtocol + "//tiles{s}.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Dark_Gray_Base_Beta/MapServer/tile/{z}/{y}/{x}",
+          urlTemplate: tileProtocol + '//tiles{s}.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/World_Dark_Gray_Base_Beta/MapServer/tile/{z}/{y}/{x}',
           options: {
             minZoom: 1,
             maxZoom: 10,
@@ -1123,7 +1123,7 @@ L.esri.Tasks.query = function(url, params){
       map.off('moveend', this._updateMapAttribution, this);
     },
     getAttribution:function(){
-      var logo = '<a href="https://developers.arcgis.com"><img src="http://js.arcgis.com/3.9/js/esri/images/map/logo-med.png" style="position:absolute; top:-38px; right:2px; border: none;"></a>';
+      var logo = '<a href="https://developers.arcgis.com" style="border: none;"><img src="http://js.arcgis.com/3.9/js/esri/images/map/logo-med.png" style="position:absolute; top:-38px; right:2px; border: none;"></a>';
       var attribution = '<span class="esri-attributions" style="line-height:14px; vertical-align: -3px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; display:inline-block;">' + this.options.attribution + '</span>' + logo;
       return attribution;
     },
@@ -1865,7 +1865,7 @@ L.esri.Layers.FeatureGrid = L.Class.extend({
 
     // if we dont have this cell in the cache yet (create)
     if (!cell) {
-       cell = {
+      cell = {
         coords: coords,
         bounds: this._cellCoordsToBounds(coords)
       };

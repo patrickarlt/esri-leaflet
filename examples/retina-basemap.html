@@ -12,7 +12,7 @@
   
 
   
-    <meta name="description" content="Displaying basemaps at higher resolutions on retina devices with the &lt;code&gt;detectRetina&lt;/code&gt; option.">
+    <meta name="description" content="Displaying basemaps at higher resolutions on retina devices with the &lt;code&gt;detectRetina&lt;/code&gt; option. IN this example the base layer is added at retina resolutiona and the labels are added at regular resolution.">
   
 
   <meta name="description" content="Esri Leaflet">
@@ -64,19 +64,19 @@
   <!-- End Google Analytics -->
 </head>
 <body>
-  <div class="container">
-    <a class="site-nav" href="../../../esri-leaflet/" class="left logo">Esri Leaflet</a>
-    <nav class="right">
-      <a class="site-nav" href="../../../esri-leaflet/examples/">Examples</a>
-      <a class="site-nav" href="../../../esri-leaflet/api-reference/">API Reference</a>
-      <a class="site-nav" href="../../../esri-leaflet/download/">Download</a>
-      <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
-    </nav>
-  </div>
-  <div id="background-map" class="background-map"></div>
-
   <div class="page-content ">
-    
+    <div class="container">
+      <a class="site-nav" href="../../../esri-leaflet/" class="left logo">Esri Leaflet</a>
+      <nav class="right">
+        <a class="site-nav" href="../../../esri-leaflet/examples/">Examples</a>
+        <a class="site-nav" href="../../../esri-leaflet/api-reference/">API Reference</a>
+        <a class="site-nav" href="../../../esri-leaflet/download/">Download</a>
+        <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
+      </nav>
+    </div>
+    <div id="background-map" class="background-map"></div>
+
+  
 
 <div class="container white">
   
@@ -147,7 +147,7 @@
 <div class="example-content">
 <div class="wrap">
   <h1>Retina Basemap</h1>
-  <p>Displaying basemaps at higher resolutions on retina devices with the <code>detectRetina</code> option.</p>
+  <p>Displaying basemaps at higher resolutions on retina devices with the <code>detectRetina</code> option. IN this example the base layer is added at retina resolutiona and the labels are added at regular resolution.</p>
 </div>
 <div id="map-wrapper">
   
@@ -155,7 +155,7 @@
 <div id="map"></div>
 
 <script>
-  var map = L.map('map').setView([47.79, -122.59], 8);
+  var map = L.map('map').setView([41.96, -82.12], 8);
 
   // use the detect retina option to load retina tiles for this layer.
   L.esri.basemapLayer('DarkGray', {
@@ -189,7 +189,7 @@
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"map"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 
 <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-  <span class="keyword">var</span> map = L.map(<span class="string">'map'</span>).setView([<span class="number">47.79</span>, -<span class="number">122.59</span>], <span class="number">8</span>);
+  <span class="keyword">var</span> map = L.map(<span class="string">'map'</span>).setView([<span class="number">41.96</span>, -<span class="number">82.12</span>], <span class="number">8</span>);
 
   <span class="comment">// use the detect retina option to load retina tiles for this layer.</span>
   L.esri.basemapLayer(<span class="string">'DarkGray'</span>, {

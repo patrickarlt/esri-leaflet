@@ -243,6 +243,12 @@ table {
       table tr:nth-child(even) td {
         background-color: #fafbfe; }
 
+body {
+  min-width: 768px; }
+
+.page-content {
+  margin: 0 .75em; }
+
 .container {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

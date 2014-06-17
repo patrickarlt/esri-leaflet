@@ -12,7 +12,7 @@
   
 
   
-    <meta name="description" content="Access Esri hosted and curated content is ArcGIS Online like traffic maps.">
+    <meta name="description" content="Access Esri hosted and curated content is ArcGIS Online like traffic maps. You will be asked to authenticate with ArcGIS Online, alternately in your application you can generate a token and pass it in.">
   
 
   <meta name="description" content="Esri Leaflet">
@@ -64,19 +64,19 @@
   <!-- End Google Analytics -->
 </head>
 <body>
-  <div class="container">
-    <a class="site-nav" href="../../../esri-leaflet/" class="left logo">Esri Leaflet</a>
-    <nav class="right">
-      <a class="site-nav" href="../../../esri-leaflet/examples/">Examples</a>
-      <a class="site-nav" href="../../../esri-leaflet/api-reference/">API Reference</a>
-      <a class="site-nav" href="../../../esri-leaflet/download/">Download</a>
-      <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
-    </nav>
-  </div>
-  <div id="background-map" class="background-map"></div>
-
   <div class="page-content ">
-    
+    <div class="container">
+      <a class="site-nav" href="../../../esri-leaflet/" class="left logo">Esri Leaflet</a>
+      <nav class="right">
+        <a class="site-nav" href="../../../esri-leaflet/examples/">Examples</a>
+        <a class="site-nav" href="../../../esri-leaflet/api-reference/">API Reference</a>
+        <a class="site-nav" href="../../../esri-leaflet/download/">Download</a>
+        <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
+      </nav>
+    </div>
+    <div id="background-map" class="background-map"></div>
+
+  
 
 <div class="container white">
   
@@ -147,7 +147,7 @@
 <div class="example-content">
 <div class="wrap">
   <h1>Access premium ArcGIS Online content</h1>
-  <p>Access Esri hosted and curated content is ArcGIS Online like traffic maps.</p>
+  <p>Access Esri hosted and curated content is ArcGIS Online like traffic maps. You will be asked to authenticate with ArcGIS Online, alternately in your application you can generate a token and pass it in.</p>
 </div>
 <div id="map-wrapper">
   
@@ -184,9 +184,7 @@
   var accessToken;
   var callbacks = [];
   var callbackPage = 'http://esri.github.io/esri-leaflet/examples/oauth/callback.html';
-  var callbackPage = 'http://esri-leaflet.dev/examples/oauth/callback.html';
 
-  var authPane = document.getElementById('auth');
   var signInButton = document.getElementById('sign-in');
 
   var trafficLayer;
@@ -280,9 +278,7 @@
   <span class="keyword">var</span> accessToken;
   <span class="keyword">var</span> callbacks = [];
   <span class="keyword">var</span> callbackPage = <span class="string">'http://esri.github.io/esri-leaflet/examples/oauth/callback.html'</span>;
-  <span class="keyword">var</span> callbackPage = <span class="string">'http://esri-leaflet.dev/examples/oauth/callback.html'</span>;
 
-  <span class="keyword">var</span> authPane = document.getElementById(<span class="string">'auth'</span>);
   <span class="keyword">var</span> signInButton = document.getElementById(<span class="string">'sign-in'</span>);
 
   <span class="keyword">var</span> trafficLayer;
