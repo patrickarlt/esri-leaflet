@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  
+    <title>L.esri.Layers.TiledMapLayer | Esri Leaflet</title>
+  
+
+  
+
+  <meta name="description" content="Esri Leaflet">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Code+Pro:300">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../../../../http:/patrickarlt.github.io/esri-leaflet/css/style.css">
+
+  <!-- cluster -->
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+
+  <!-- leaflet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+
+  <!-- leaflet plugins -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.heat/0.1.1/leaflet-heat.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+
+  <!-- esri leaflet -->
+  <script src="../../../../http:/patrickarlt.github.io/esri-leaflet/js/esri-leaflet-src.js"></script>
+  <script src="../../../../http:/patrickarlt.github.io/esri-leaflet/js/heatmap-feature-layer-src.js"></script>
+  <script src="../../../../http:/patrickarlt.github.io/esri-leaflet/js/clustered-feature-layer-src.js"></script>
+
+  <!-- esri leaflet geocoder -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css">
+</head>
+<body>
+  <div class="container">
+    <a class="site-nav" href="../../../../http:/patrickarlt.github.io/esri-leaflet/" class="left logo">Esri Leaflet</a>
+    <nav class="right">
+      <a class="site-nav" href="../../../../http:/patrickarlt.github.io/esri-leaflet/examples/">Examples</a>
+      <a class="site-nav" href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/">API Reference</a>
+      <a class="site-nav" href="../../../../http:/patrickarlt.github.io/esri-leaflet/download/">Download</a>
+      <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
+    </nav>
+  </div>
+  <div id="background-map" class="background-map"></div>
+
+  <div class="page-content ">
+    
+
+<div class="container white">
+  
+
+<aside class="sidebar">
+  <h5>L.esri</h5>
+  <nav>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/request.html">Request</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/utils.html">Utils</a>
+  </nav>
+
+  <h5>L.esri.Layers</h5>
+  <nav>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/base-map-layer.html">BasemapLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/tiled-map-layer.html">TiledMapLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/dynamic-map-layer.html">DynamicMapLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/feature-layer.html">FeatureLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/clustered-feature-layer.html">ClusteredFeatureLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/layers/heatmap-feature-layer.html">HeatmapFeatureLayer</a>
+  </nav>
+
+  <h5>L.esri.Services</h5>
+  <nav>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/services/feature-layer.html">FeatureLayer</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/services/map-service.html">MapService</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/services/service.html">Service</a>
+  </nav>
+
+  <h5>L.esri.Tasks</h5>
+  <nav>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/tasks/identify.html">Identify</a>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/tasks/query.html">Query</a>
+  </nav>
+
+  <h5>Misc.</h5>
+  <nav>
+    <a href="../../../../http:/patrickarlt.github.io/esri-leaflet/api-reference/events.html">Events</a>
+  </nav>
+</aside>
+
+<div class="main-content">
+  <h1 id="l-esri-layers-tiledmaplayer">L.esri.Layers.TiledMapLayer</h1>
+<p>Inherits from <a href="http://leafletjs.com/reference.html#tilelayer"><code>L.TileLayer</code></a></p>
+<p>Access tile caches from ArcGIS Online and ArcGIS Server as well as visualze and identify features on them.</p>
+<p><strong>Your map service must be published using the Web Mercator Auxiliary Sphere tiling scheme (WKID 102100/3857) and the default scale option used by Google Maps, Bing Maps and <a href="http://resources.arcgis.com/en/help/arcgisonline-content/index.html#//011q00000002000000">ArcGIS Online</a>. Esri Leaflet will not support any other spatial reference for tile layers.</strong></p>
+<h3 id="constructor">Constructor</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Constructor</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code class="nobr">new L.esri.Layers.TiledMapLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code><br><br><code class="nobr">L.esri.Layers.tiledMapLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code><br><br><code class="nobr">new L.esri.TiledMapLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code><br><br><code class="nobr">L.esri.tiledMapLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code></td>
+            <td><code>url</code> should be the URL to the Map Service hosted the tiles. The <code>options</code> parameter can accept the same options as <a href="http://leafletjs.com/reference.html#tilelayer"><code>L.TileLayer</code></a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy</code></td>
+<td><code>String</code></td>
+<td><code>false</code></td>
+<td>URL of an <a href="https://developers.arcgis.com/javascript/jshelp/ags_proxy.html">ArcGIS API for JavaScript proxies</a> or <a href="https://github.com/Esri/resource-proxy">ArcGIS Resoruce Proxies</a> to use for proxying POST requests.</td>
+</tr>
+<tr>
+<td><code>useCORS</code></td>
+<td><code>Boolean</code></td>
+<td><code>true</code></td>
+<td>If this service should use CORS when making GET requests.</td>
+</tr>
+</tbody>
+</table>
+<p><code>L.esri.TiledMapLayer</code> also accepts all <a href="http://leafletjs.com/reference.html#tilelayer-options"><code>L.TileLayer</code></a> options.</p>
+<h3 id="methods">Methods</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Returns</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>authenticate(&lt;String&gt; token)</code></td>
+            <td><code>this</code></td>
+            <td>Authenticates this service with a new token and runs any pending requests that required a token.</td>
+        </tr>
+        <tr>
+            <td><code>metadata(&lt;Function&gt; callback, &lt;Object&gt; context)</code></td>
+            <td><code>this</code></td>
+            <td>
+                Requests metadata about this Feature Layer. Callback will be called with <code>error</code> and <code>metadata</code>.
+<pre class="js"><code>featureLayer.metadata(function(error, metadata){
+  console.log(metadata);
+});</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><code>identify()</code></td>
+            <td><code>this</code></td>
+            <td>
+                Returns a new <a href=""><code>L.esri.services.Identify</code></a> object that can be used to identify features on this layer. Your callback function will be passed a GeoJSON FeatureCollection with the results or an error.
+<pre class="js"><code>featureLayer.identify()
+            .at(latlng, latlngbounds, 5)
+            .run(function(error, featureCollection){
+              console.log(featureCollection);
+            });</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><code>L.esri.BasemapLayer</code> inherits all methods from <a href="http://leafletjs.com/reference.html#tilelayer"><code>L.TileLayer</code></a>.</p>
+<h3 id="events">Events</h3>
+<p><code>L.esri.TiledMapLayer</code> fires all  <a href="http://leafletjs.com/reference.html#tilelayer"><code>L.TileLayer</code></a> events.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-js"><span class="keyword">var</span> map = L.map(<span class="string">'map'</span>).setView([<span class="number">37.7614</span>, -<span class="number">122.3911</span>], <span class="number">12</span>);
+
+L.esri.tiledMapLayer(<span class="string">"http://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer"</span>, {
+  maxZoom: <span class="number">15</span>
+}).addTo(map);</code></pre>
+
+  <p><a href="http://github.com/esri/esri-leaflet/edit/beta5/site/source/pages/api-reference/layers/tiled-map-layer.md">Edit this page on GitHub</a></p>
+</div>
+  <div style='clear:both;'></div>
+</div>
+<div class="container centered-text">
+  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
+</div>
+  </div>
+  <script src="../../../../http:/patrickarlt.github.io/esri-leaflet/js/script.js"></script>
+  </body>
+</html>

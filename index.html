@@ -1,82 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Esri-Leaflet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <style>
-      html, body, * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-      }
-      div {
-        text-align:center;
-      }
-      ul {
-        list-style-type: none;
-        list-style-position:inside;
-        margin:0;
-        padding:0;
-      }
-      li {
-        padding: 0.5em 0;
-      }
-      h1 {
-        background-color: #0078c5;
-        color: white;
-        padding: 1em;
-        margin-bottom:1em;
-      }
-      h3 {
-        padding-top: 1em;
-      }
-      .small-font{
-        font-size: 12px;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="https://github.com/esri/esri-leaflet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-    <div>
-      <h1 class="title">Esri-Leaflet Plugin</h1>
-      <p>Examples that show you how to build powerful mapping apps with <a href="http://leafletjs.com/">Leaflet</a> and <a href="http://developers.arcgis.com/">ArcGIS Online</a>.</p>
-      <h3>ArcGIS Online Basemaps</h3>
-      <ul>
-        <li><a href="arcgisbasemap.html">ArcGIS Basemap</a></li>
-        <li><a href="arcgisbasemaps.html">All Basemaps</a></li>
-        <li><a href="retinamaps.html">Retina Maps</a></li>
-        <li><a href="mobile.html">Mobile Geolocation Map</a></li>
-      </ul>
-      <h3>ArcGIS Dynamic Map Service</h3>
-      <ul>
-        <li><a href="dynamicmapservice.html">Map Service Identify</a></li>
-        <li><a href="dynamicmapserviceidentify.html">Map Service Filter</a></li>
-      </ul>
-      </ul>
-      <h3>ArcGIS Demographic Map Services</h3>
-      <ul>
-        <li><a href="demographicmaps.html">Demographic Maps</a></li>
-      </ul>
-      <h3>ArcGIS Online Feature Services</h3>
-      <ul>
-        <li><a href="arcgisfeatureservice.html">Add FeatureLayer</a></li>
-        <li><a href="featureserviceinfo.html">Feature Service Info</a></li>
-        <li><a href="featureservicequery.html">Feature Service Query</a></li>
-        <li><a href="symbolizepointfeatures.html">Symbolize Point Features</a></li>
-        <li><a href="symbolizelinefeatures.html">Symbolize Line Features</a></li>
-        <li><a href="basicclustering.html">Basic Clustering</a></li>
-        <li><a href="symbolizeclusters.html">Advanced Clustering</a></li>
-      </ul>
-      <h3>ArcGIS Online Geocode Service</h3>
-      <ul>
-        <li><a href="findplaces.html">Find Places</a></li>
-        <li><a href="reversegeocode.html">Reverse Geocode</a></li>
-      </ul>
-      </br>
-      <small class="small-font">NOTE: Esri-Leaflet has a dependency on <a href="https://github.com/Esri/Terraformer">Terraformer</a> which is bundled in esri-leaflet.min.js.</small>
-      <small class="small-font">Some samples also use <a href="https://github.com/Esri/geoservices-js">geoservices-js</a> to access <a href="http://resources.arcgis.com/en/help/arcgis-rest-api/">ArcGIS Online REST Services</a>.</small>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  
+    <title>Esri Leaflet</title>
+  
+
+  
+
+  <meta name="description" content="Esri Leaflet">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Code+Pro:300">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../../http:/patrickarlt.github.io/esri-leaflet/css/style.css">
+
+  <!-- cluster -->
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+
+  <!-- leaflet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+
+  <!-- leaflet plugins -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.heat/0.1.1/leaflet-heat.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+
+  <!-- esri leaflet -->
+  <script src="../../http:/patrickarlt.github.io/esri-leaflet/js/esri-leaflet-src.js"></script>
+  <script src="../../http:/patrickarlt.github.io/esri-leaflet/js/heatmap-feature-layer-src.js"></script>
+  <script src="../../http:/patrickarlt.github.io/esri-leaflet/js/clustered-feature-layer-src.js"></script>
+
+  <!-- esri leaflet geocoder -->
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css">
+</head>
+<body>
+  <div class="container">
+    <a class="site-nav" href="../../http:/patrickarlt.github.io/esri-leaflet/" class="left logo">Esri Leaflet</a>
+    <nav class="right">
+      <a class="site-nav" href="../../http:/patrickarlt.github.io/esri-leaflet/examples/">Examples</a>
+      <a class="site-nav" href="../../http:/patrickarlt.github.io/esri-leaflet/api-reference/">API Reference</a>
+      <a class="site-nav" href="../../http:/patrickarlt.github.io/esri-leaflet/download/">Download</a>
+      <a class="site-nav" href="https://github.com/Esri/esri-leaflet">View on GitHub</a>
+    </nav>
+  </div>
+  <div id="background-map" class="background-map"></div>
+
+  <div class="page-content homepage">
+    
+
+<div class="homepage-copy">
+  <div class="modal">
+    <h1 class="center-text page-title">Esri Leaflet</h1>
+    <p class="large page-description">A lightweight set of tools for using ArcGIS services with Leaflet.</p>
+    <div class="center-text">
+      <a href="../../http:/patrickarlt.github.io/esri-leaflet/examples/" class="btn">Examples</a>
+      <a href="../../http:/patrickarlt.github.io/esri-leaflet/api-reference/" class="btn">API Reference</a>
+      <a href="../../http:/patrickarlt.github.io/esri-leaflet/download/" class="btn">Download</a>
     </div>
+  </div>
+</div>
+  </div>
+  <script src="../../http:/patrickarlt.github.io/esri-leaflet/js/script.js"></script>
   </body>
 </html>
