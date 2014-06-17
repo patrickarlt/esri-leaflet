@@ -252,7 +252,7 @@ table {
   margin-left: auto;
   position: relative;
   z-index: 3;
-  padding: 2em 1em; }
+  padding: 2em 0; }
   .container:before, .container:after {
     content: " ";
     display: table; }
@@ -262,7 +262,7 @@ table {
     padding: 0;
     position: relative; }
   .container.single {
-    padding: 1px 1em 1em; }
+    padding: 1px 1em; }
 
 .site-nav {
   display: inline-block;
@@ -282,7 +282,8 @@ table {
   display: inline-block;
   font-size: 1rem;
   color: white;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  margin: 0; }
   .copyright a {
     color: white; }
     .copyright a:hover {
