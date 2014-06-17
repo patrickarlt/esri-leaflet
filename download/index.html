@@ -15,6 +15,10 @@
   <meta name="description" content="Esri Leaflet">
   <meta name="viewport" content="width=device-width">
 
+  <!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <![endif]-->
+
   <!-- google fonts -->
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Code+Pro:300">
@@ -81,8 +85,12 @@
 <h4 id="standard-build">Standard Build</h4>
 <pre><code class="language-xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre>
 <h4 id="other-builds">Other Builds</h4>
+<p>Esri Leaflet is also built into several smaller components and plugins for specific use cases these more specialized builds are available on the CDN.</p>
 <pre><code class="language-xml"><span class="comment">&lt;!-- Core Build --&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-core.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+<span class="comment">&lt;!-- Basemaps Only Build --&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-basemaps.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 
 <span class="comment">&lt;!-- Feature Layer Only Build --&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-feature-layer.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
@@ -100,6 +108,7 @@
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css"</span>&gt;</span></code></pre>
 <h1 id="builds">Builds</h1>
+<p>A summary of what features exist in which builds.</p>
 <table>
 <thead>
 <tr>
@@ -115,21 +124,21 @@
 </thead>
 <tbody>
 <tr>
-<td>Size - kb</td>
+<td>Size</td>
 <td>37.5kb</td>
 <td>7.7kb</td>
-<td>10.1kb</td>
-<td>21.3kb</td>
+<td>11.8kb</td>
+<td>23kb</td>
 <td>8.3kb</td>
-<td>3.2kb</td>
+<td>3.w2kb</td>
 <td>1.5kb</td>
 </tr>
 <tr>
-<td>Size Gzipped - kb</td>
+<td>Gzipped</td>
 <td>6.38kb</td>
 <td>1.6kb</td>
-<td>1.92kb</td>
-<td>4kb</td>
+<td>2.23kb</td>
+<td>4.3kb</td>
 <td>1.5kb</td>
 <td>0.6kb</td>
 <td>0.3kb</td>
