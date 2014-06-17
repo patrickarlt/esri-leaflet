@@ -117,7 +117,7 @@
 
 <div class="main-content">
   <h1 id="l-esri-tasks-identify">L.esri.Tasks.Identify</h1>
-<p><code>L.esri.Tasks.Identify</code> is an abstaction for the Identify API that exists on Map Services. It provides a chainable API for building request parameters and executing the request.</p>
+<p><code>L.esri.Tasks.Identify</code> is an abstraction for the Identify API that exists on Map Services. It provides a chainable API for building request parameters and executing the request.</p>
 <h3 id="constructor">Constructor</h3>
 <table>
     <thead>
@@ -132,7 +132,7 @@
             <code>L.esri.Tasks.identify(<nobr class="param"><span>&lt;<a href="../../api-reference/services/map-service.html">MapService</a>&gt;</span> <code>endpoint</code></nobr>)</code><br><br>
             <code>new L.esri.Tasks.Identify(<nobr class="param"><span>&lt;String&gt;</span> <code>endpoint</code></nobr>)</code><br><br>
             <code>L.esri.Tasks.identify(<nobr class="param"><span>&lt;String&gt;</span> <code>endpoint</code></nobr>)</code><br></td>
-            <td>The <code>endpoint</code> parameter is the service that you want to identify either an  ArcGIS Server or ArcGIS Online service. You can also pass the URL to a service directly as a string. See <a href="#service-urls">service URLs</a> for more information on how to find these urls.</td>
+            <td>The <code>endpoint</code> parameter is the service that you want to identify either an  ArcGIS Server or ArcGIS Online service. You can also pass the URL to a service directly as a string. See <a href="#service-urls">service URLs</a> for more information on how to find these URLs.</td>
         </tr>
     </tbody>
 </table>
@@ -185,7 +185,7 @@
         <tr>
             <td><code>simplify(<nobr class="param"><span>&lt;<a href="http://leafletjs.com/reference.html#map">Map</a>&gt;</span> <code>map</code></nobr>,  <nobr class="param"><span>&lt;Integer&gt;</span> <code>factor</code></nobr>)</code></td>
             <td><code>this</code></td>
-            <td>Simplify the geometries of the output features for the current map view. the <code>factor</code> parameter controls the amount of simplification between 0 (no simplication)and 1 (simplify to the most basic shape possible).</td>
+            <td>Simplify the geometries of the output features for the current map view. the <code>factor</code> parameter controls the amount of simplification between 0 (no simplification) and 1 (simplify to the most basic shape possible).</td>
         </tr>
         <tr>
             <td><code>token(<nobr class="param"><span>&lt;String&gt;</span> <code>token</code></nobr>)</code></td>
@@ -195,7 +195,7 @@
         <tr>
             <td><code>run(<nobr class="param"><span>&lt;Function&gt;</span> <code>callback</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>context</code></nobr>)</code></td>
             <td><code>this</code></td>
-            <td>Exectues the identify request with the current parameters, identified features will be passed to <code>callback</code> as a <a href="http://geojson.org/geojson-spec.html#feature-collection-objects">GeoJSON FeatureCollection</a>. Accepts an optional function context</td>
+            <td>Executes the identify request with the current parameters, identified features will be passed to <code>callback</code> as a <a href="http://geojson.org/geojson-spec.html#feature-collection-objects">GeoJSON FeatureCollection</a>. Accepts an optional function context</td>
         </tr>
     </tbody>
 </table>
@@ -216,8 +216,9 @@ L.esri.Tasks.identify(<span class="string">'http://sampleserver6.arcgisonline.co
   <div style='clear:both;'></div>
 </div>
 <div class="container centered-text">
-  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
+  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&amp;D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
 </div>
+
   </div>
   <script src="../../../../esri-leaflet/js/script.js"></script>
   </body>

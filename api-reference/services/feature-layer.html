@@ -118,7 +118,7 @@
 <div class="main-content">
   <h1 id="l-esri-services-featurelayer">L.esri.Services.FeatureLayer</h1>
 <p>Inherits from <a href="../../../../esri-leaflet//api-reference/services/service.html"><code>L.esri.Service</code></a></p>
-<p><code>L.esri.Services.FeatureLayer</code> is an abstaction interacting with Feature Layers running on ArcGIS Online and ArcGIS server that allows you to make requests to the API, as well as query, add, update and remove features from the service.</p>
+<p><code>L.esri.Services.FeatureLayer</code> is an abstraction interacting with Feature Layers running on ArcGIS Online and ArcGIS server that allows you to make requests to the API, as well as query, add, update and remove features from the service.</p>
 <h3 id="constructor">Constructor</h3>
 <table>
     <thead>
@@ -130,7 +130,7 @@
     <tbody>
         <tr>
             <td><code class="nobr">new L.esri.Services.FeatureLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code><br><br><code class="nobr">L.esri.Services.featureLayer(<nobr class="param"><span>&lt;String&gt;</span> <code>url</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>options</code></nobr>)</code></td>
-            <td>The <code>url</code> parameter is the url to the ArcGIS Server or ArcGIS Online feature layer you would like to consume.</td>
+            <td>The <code>url</code> parameter is the URL to the ArcGIS Server or ArcGIS Online feature layer you would like to consume.</td>
         </tr>
     </tbody>
 </table>
@@ -168,7 +168,7 @@
             <td>
                 Adds a new feature to the feature layer. this also adds the feature to the map if creation is successful.
                 <ul>
-                    <li>Requires authentication as a user who has permission to edit the service in ArcGIS Online or the user who created the srevice.</li>
+                    <li>Requires authentication as a user who has permission to edit the service in ArcGIS Online or the user who created the service.</li>
                     <li>Requires the <code>Create</code> capability be enabled on the service. You can check if creation exists by checking the metadata of your service under capabilities in the metadata.</li>
                 </ul>
             </td>
@@ -179,7 +179,7 @@
             <td>
                 Update the provided feature on the Feature Layer. This also updates the feature on the map.
                 <ul>
-                    <li>Requires authentication as a user who has permission to edit the service in ArcGIS Online or the user who created the srevice.</li>
+                    <li>Requires authentication as a user who has permission to edit the service in ArcGIS Online or the user who created the service.</li>
                     <li>Requires the <code>Update</code> capability be enabled on the service. You can check if creation exists by checking the metadata of your service under capabilities in the metadata.</li>
                 </ul>
             </td>
@@ -265,8 +265,9 @@ service.query().where(<span class="string">"name='Hello World'"</span>).run(<spa
   <div style='clear:both;'></div>
 </div>
 <div class="container centered-text">
-  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
+  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&amp;D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
 </div>
+
   </div>
   <script src="../../../../esri-leaflet/js/script.js"></script>
   </body>

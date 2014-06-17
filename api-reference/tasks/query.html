@@ -117,7 +117,7 @@
 
 <div class="main-content">
   <h1 id="l-esri-tasks-query">L.esri.Tasks.Query</h1>
-<p><code>L.esri.Tasks.Query</code> is an abstaction for the query API that exists on Feature Layers and Map Services. It provides a chainable API for building request parameters and executing queries.</p>
+<p><code>L.esri.Tasks.Query</code> is an abstraction for the query API that exists on Feature Layers and Map Services. It provides a chainable API for building request parameters and executing queries.</p>
 <h3 id="constructor">Constructor</h3>
 <table>
     <thead>
@@ -132,7 +132,7 @@
             <code>L.esri.Tasks.query(<nobr class="param"><span>&lt;<a href="../../api-reference/services/feature-layer.html">FeatureLayer</a>&gt;</span> <code>endpoint</code></nobr>)</code><br><br>
             <code>new L.esri.Tasks.Query(<nobr class="param"><span>&lt;String&gt;</span> <code>endpoint</code></nobr>)</code><br><br>
             <code>L.esri.Tasks.query(<nobr class="param"><span>&lt;String&gt;</span> <code>endpoint</code></nobr>)</code></td>
-            <td>The <code>endpoint</code> parameter is the service that you want to query either an  ArcGIS Server or ArcGIS Online service. You can also pass the URL to a service directly as a string. See <a href="#service-urls">service URLs</a> for more information on how to find these urls.</td>
+            <td>The <code>endpoint</code> parameter is the service that you want to query either an  ArcGIS Server or ArcGIS Online service. You can also pass the URL to a service directly as a string. See <a href="#service-urls">service URLs</a> for more information on how to find these URLs.</td>
         </tr>
     </tbody>
 </table>
@@ -150,7 +150,7 @@
         <tr>
             <td><code>within(<nobr class="param"><span>&lt;<a href="http://leafletjs.com/reference.html#latlngbounds">LatLngBounds</a>&gt;</span> <code>bounds</code></nobr>)</code></td>
             <td><code>this</code></td>
-            <td>Queries feautres with the given <a href="http://leafletjs.com/reference.html#latlngbounds">LatLngBounds</a> object.</td>
+            <td>Queries features with the given <a href="http://leafletjs.com/reference.html#latlngbounds">LatLngBounds</a> object.</td>
         </tr>
         <tr>
             <td><code>nearby(<nobr class="param"><span>&lt;<a href="http://leafletjs.com/reference.html#latlng">LatLng</a>&gt;</span> <code>latlng</code></nobr>, <nobr class="param"><span>&lt;Integer&gt;</span> <code>distance</code></nobr>)</code></td>
@@ -165,7 +165,7 @@
         <tr>
             <td><code>offset(<nobr class="param"><span>&lt;Integer&gt;</span> <code>offset</code></nobr>)</code></td>
             <td><code>this</code></td>
-            <td>Define the offest of the results, when combined with <code>limit</code> can be used for paging. Available only for Feature Services hosted on ArcGIS Online.</td>
+            <td>Define the offset of the results, when combined with <code>limit</code> can be used for paging. Available only for Feature Services hosted on ArcGIS Online.</td>
         </tr>
         <tr>
             <td><code>limit(<nobr class="param"><span>&lt;Integer&gt;</span> <code>limit</code></nobr>)</code></td>
@@ -185,7 +185,7 @@
         <tr>
             <td><code>simplify(<nobr class="param"><span>&lt;<a href="http://leafletjs.com/reference.html#map">Map</a>&gt;</span> <code>map</code></nobr>,  <nobr class="param"><span>&lt;Integer&gt;</span> <code>factor</code></nobr>)</code></td>
             <td><code>this</code></td>
-            <td>Simplify the geometries of the output features for the current map view. the <code>factor</code> parameter controls the amount of simplification between 0 (no simplication)and 1 (simplify to the most basic shape possible).</td>
+            <td>Simplify the geometries of the output features for the current map view. the <code>factor</code> parameter controls the amount of simplification between 0 (no simplification) and 1 (simplify to the most basic shape possible).</td>
         </tr>
         <tr>
             <td><code>orderBy(<nobr class="param"><span>&lt;String&gt;</span> <code>fieldName</code></nobr>, <nobr class="param"><span>&lt;String&gt;</span> <code>order</code></nobr>)</code></td>
@@ -206,7 +206,8 @@
             <td><code>token(<nobr class="param"><span>&lt;String&gt;</span> <code>token</code></nobr>)</code></td>
             <td><code>this</code></td>
             <td>Adds a token to this request if the service requires authentication. Will be added automatically if used with a service.</td>
-        </tr><br>        <tr>
+        </tr>
+        <tr>
             <td><code>run(<nobr class="param"><span>&lt;Function&gt;</span> <code>callback</code></nobr>, <nobr class="param"><span>&lt;Object&gt;</span> <code>context</code></nobr>)</code></td>
             <td><code>this</code></td>
             <td>Exectues the query request with the current parameters, features will be passed to <code>callback</code> as a <a href="http://geojson.org/geojson-spec.html#feature-collection-objects">GeoJSON FeatureCollection</a>. Accepts an optional function context.</td>
@@ -292,8 +293,9 @@ query.where(<span class="string">"zone_id='B'"</span>).bounds(<span class="funct
   <div style='clear:both;'></div>
 </div>
 <div class="container centered-text">
-  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
+  <p class="copyright">Esri Leaflet is a project from the <a href="http://pdx.esri.com">Esri PDX R&amp;D Center</a> and the <a href="https://github.com/Esri/esri-leaflet/graphs/contributors">Esri Community</a></p>
 </div>
+
   </div>
   <script src="../../../../esri-leaflet/js/script.js"></script>
   </body>
