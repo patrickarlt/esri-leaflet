@@ -170,7 +170,7 @@
     var hollywood = L.geoJson(neighborhoods).addTo(map);
 
     // fit map to boundry
-    map.fitBounds(hollywood.getBounds());
+    map.fitBounds(hollywood.getBounds().pad(0.5));
 
     // query all bike parking where BPSTYLE='STAPLE' inside our boundry
     L.esri.Tasks.query(bikeParkingUrl).where("BPSTYLE='STAPLE'").within(hollywood).run(function(error, bikeParking){
@@ -215,7 +215,7 @@
     <span class="keyword">var</span> hollywood = L.geoJson(neighborhoods).addTo(map);
 
     <span class="comment">// fit map to boundry</span>
-    map.fitBounds(hollywood.getBounds());
+    map.fitBounds(hollywood.getBounds().pad(<span class="number">0.5</span>));
 
     <span class="comment">// query all bike parking where BPSTYLE='STAPLE' inside our boundry</span>
     L.esri.Tasks.query(bikeParkingUrl).where(<span class="string">"BPSTYLE='STAPLE'"</span>).within(hollywood).run(<span class="function"><span class="keyword">function</span><span class="params">(error, bikeParking)</span>{</span>
