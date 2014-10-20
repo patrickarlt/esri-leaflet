@@ -12,7 +12,7 @@
   
 
   
-    <meta name="description" content="Display a Map Service from ArcGIS Online or ArcGIS Server.  More information about Map Services can be found in the &lt;a href=&quot;/esri-leaflet/api-reference/layers/dymanic-map-layer.html&quot;&gt;L.esri.Layers.DynamicMapLayer&lt;/a&gt; documentation.">
+    <meta name="description" content="Display a Map Service from ArcGIS Online or ArcGIS Server.  More information about Map Services can be found in the &lt;a href=&quot;/esri-leaflet/api-reference/layers/dynamic-map-layer.html&quot;&gt;L.esri.Layers.DynamicMapLayer&lt;/a&gt; documentation.">
   
 
   <meta name="description" content="Esri Leaflet">
@@ -30,26 +30,12 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="../../../esri-leaflet/css/style.css">
 
-  <!-- cluster -->
-  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.css">
-  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
-
   <!-- leaflet -->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
-
-  <!-- leaflet plugins -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.heat/0.1.1/leaflet-heat.js"></script>
-  <script src="http://cdn-geoweb.s3.amazonaws.com/Leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
   <!-- esri leaflet -->
-  <script src="../../../esri-leaflet/js/esri-leaflet-src.js"></script>
-  <script src="../../../esri-leaflet/js/heatmap-feature-layer-src.js"></script>
-  <script src="../../../esri-leaflet/js/clustered-feature-layer-src.js"></script>
-
-  <!-- esri leaflet geocoder -->
-  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css">
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.2/esri-leaflet.js"></script>
 
   <!-- Google Analytics -->
   <script>
@@ -90,6 +76,27 @@
     <a href="../../../esri-leaflet/examples/retina-basemap.html">Retina Basemap</a>
   </nav>
 
+  <h5>Feature Layers</h5>
+  <nav>
+    <a href="../../../esri-leaflet/examples/simple-feature-layer.html">Simple FeatureLayer</a>
+    <a href="../../../esri-leaflet/examples/styling-feature-layer-points.html">Styling points</a>
+    <a href="../../../esri-leaflet/examples/styling-feature-layer-polylines.html">Styling lines</a>
+    <a href="../../../esri-leaflet/examples/styling-feature-layer-polygons.html">Styling polygons</a>
+    <a href="../../../esri-leaflet/examples/feature-layer-popups.html">Custom popups</a>
+    <a href="../../../esri-leaflet/examples/querying-feature-layers-1.html">Querying features #1</a>
+    <a href="../../../esri-leaflet/examples/querying-feature-layers-2.html">Querying features #2</a>
+    <a href="../../../esri-leaflet/examples/spatial-queries.html">Spatial Queries</a>
+    <a href="../../../esri-leaflet/examples/simplifying-complex-features.html">Simplifying complex features</a>
+    <a href="../../../esri-leaflet/examples/zooming-to-all-features.html">Zoom to all features</a>
+    <a href="../../../esri-leaflet/examples/labeling-features.html">Labeling Features</a>
+    <a href="../../../esri-leaflet/examples/custering-feature-layers.html">Clustering points</a>
+    <a href="../../../esri-leaflet/examples/styling-clusters.html">Styling clusters</a>
+    <a href="../../../esri-leaflet/examples/visualize-points-as-a-heatmap.html">Points as a heatmap</a>
+    <a href="../../../esri-leaflet/examples/styling-heatmaps.html">Styling heatmaps</a>
+    <a href="../../../esri-leaflet/examples/visualizing-time-with-feature-layer.html">Time enabled services</a>
+    <a href="../../../esri-leaflet/examples/visualizing-time-with-feature-layer.html">Layer "snapshots"</a>
+  </nav>
+
   <h5>Tile Layers</h5>
   <nav>
     <a href="../../../esri-leaflet/examples/tile-layer-1.html">Tiles from a Map Service #1</a>
@@ -101,26 +108,19 @@
   <nav>
     <a href="../../../esri-leaflet/examples/simple-dynamic-map-layer.html">Simple DynamicMapLayer</a>
     <a href="../../../esri-leaflet/examples/identifying-features.html">Identifying Features</a>
+    <a href="../../../esri-leaflet/examples/finding-features.html">Finding Features</a>
     <a href="../../../esri-leaflet/examples/customizing-popups.html">Custom popups</a>
     <a href="../../../esri-leaflet/examples/visualizing-time-on-dynamic-map-layer.html">Time Ranges</a>
   </nav>
 
-  <h5>Feature Layers</h5>
+  <h5>Image Map Layer</h5>
   <nav>
-    <a href="../../../esri-leaflet/examples/simple-feature-layer.html">Simple FeatureLayer</a>
-    <a href="../../../esri-leaflet/examples/styling-feature-layer-points.html">Styling points</a>
-    <a href="../../../esri-leaflet/examples/styling-feature-layer-polylines.html">Styling lines</a>
-    <a href="../../../esri-leaflet/examples/styling-feature-layer-polygons.html">Styling polygons</a>
-    <a href="../../../esri-leaflet/examples/feature-layer-popups.html">Custom popups</a>
-    <a href="../../../esri-leaflet/examples/querying-feature-layers-1.html">Querying features #1</a>
-    <a href="../../../esri-leaflet/examples/querying-feature-layers-2.html">Querying features #2</a>
-    <a href="../../../esri-leaflet/examples/simplifying-complex-features.html">Simplifying complex features</a>
-    <a href="../../../esri-leaflet/examples/zooming-to-all-features.html">Zoom to all features</a>
-    <a href="../../../esri-leaflet/examples/custering-feature-layers.html">Clustering points</a>
-    <a href="../../../esri-leaflet/examples/styling-clusters.html">Styling clusters</a>
-    <a href="../../../esri-leaflet/examples/visualize-points-as-a-heatmap.html">Points as a heatmap</a>
-    <a href="../../../esri-leaflet/examples/styling-heatmaps.html">Styling heatmaps</a>
-    <a href="../../../esri-leaflet/examples/visualizing-time-with-feature-layer.html">Time enabled services</a>
+    <a href="../../../esri-leaflet/examples/simple-image-map-layer.html">Simple ImageMapLayer</a>
+    <a href="../../../esri-leaflet/examples/infrared-imagery.html">Infrared Imagery using BandIDs</a>
+    <a href="../../../esri-leaflet/examples/image-map-layer-rendering-rule.html">Rendering Rule</a>
+    <a href="../../../esri-leaflet/examples/identifying-imagery.html">Identify Imagery</a>
+    <a href="../../../esri-leaflet/examples/image-map-layer-mosaic-rule.html">Mosaic Rule</a>
+    <a href="../../../esri-leaflet/examples/imagery-popups.html">Custom popups</a>
   </nav>
 
   <h5>Authentication</h5>
@@ -140,6 +140,7 @@
   <h5>Misc.</h5>
   <nav>
     <a href="../../../esri-leaflet/examples/getting-service-metadata.html">Getting service metadata</a>
+    <a href="../../../esri-leaflet/examples/parse-feature-collection.html">Parsing Feature Collections</a>
   </nav>
 
 </aside>
@@ -148,7 +149,7 @@
 <div class="example-content">
 <div class="wrap">
   <h1>Simple DynamicMapLayer</h1>
-  <p>Display a Map Service from ArcGIS Online or ArcGIS Server.  More information about Map Services can be found in the <a href="/esri-leaflet/api-reference/layers/dymanic-map-layer.html">L.esri.Layers.DynamicMapLayer</a> documentation.</p>
+  <p>Display a Map Service from ArcGIS Online or ArcGIS Server.  More information about Map Services can be found in the <a href="/esri-leaflet/api-reference/layers/dynamic-map-layer.html">L.esri.Layers.DynamicMapLayer</a> documentation.</p>
 </div>
 <div id="map-wrapper">
   
@@ -176,7 +177,7 @@
   <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 
   <span class="comment">&lt;!-- Load Esri Leaflet from CDN --&gt;</span>
-  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.2/esri-leaflet.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 
   <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
     <span class="tag">body</span> <span class="rules">{<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule">}</span></span>
