@@ -1,6 +1,4 @@
-L.esri.Layers.FeatureGrid = L.Class.extend({
-
-  includes: L.Mixin.Events,
+L.esri.Layers.FeatureGrid = L.Layer.extend({
 
   options: {
     cellSize: 512,
@@ -13,7 +11,7 @@ L.esri.Layers.FeatureGrid = L.Class.extend({
 
   onAdd: function (map) {
     this._map = map;
-    this._update = L.Util.limitExecByInterval(this._update, this.options.updateInterval, this);
+    this._update = L.Util.throttle(this._update, this.options.updateInterval, this);
 
     // @TODO remove for leaflet 0.8
     this._map.addEventListener(this.getEvents(), this);
