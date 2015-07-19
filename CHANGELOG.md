@@ -41,6 +41,7 @@ L.esri.featureLayer({
 
 ### Removed
 
+* Some samples relating to clustering and projections have been removed since they are not compatible with Leaflet 1.0.0-beta.1.
 * All alternate/compact builds have been removed. They will be replaced with a new system for generating custom builds soon.
 * `L.esri.Request` has been removed. Please use `L.esri.get`, `L.esri.get.CORS`, `L.esri.get.JSONP`, `L.esri.post` or `L.esri.request` directly.
 
