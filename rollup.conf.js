@@ -10,6 +10,7 @@ import uglify from 'rollup-plugin-uglify';
 export default {
   entry: 'src/EsriLeaflet.js',
   dest: 'dist/esri-leaflet.js',
+  moduleName: 'L.esri',
   sourceMap: 'dist/esri-leaflet.js.map',
   // intro: copyright,
   external: [
