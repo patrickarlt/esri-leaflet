@@ -59,7 +59,7 @@
     "sinon": "^1.11.1",
     "sinon-chai": "2.7.0",
     "snazzy": "^2.0.1",
-    "uglify-js": "^2.6.1",
+    "uglify-js": "2.4.16",
     "watch": "^0.17.1"
   },
   "homepage": "http://esri.github.io/esri-leaflet",

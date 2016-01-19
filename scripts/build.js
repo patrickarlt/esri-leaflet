@@ -6,20 +6,34 @@ var rollup = require('rollup').rollup;
 var UglifyJS = require('uglify-js');
 var pkg = require('../package.json');
 var entryFile = 'src/EsriLeaflet.js';
+var json = require('rollup-plugin-json');
+var npm = require('rollup-plugin-npm');
 
-var copyright = '/* ' + pkg.name + ' - v' + pkg.version + ' - ' + new Date().toString() + '\n' +
+var copyright = '/**\n' +
+                ' * ' + pkg.name + ' - v' + pkg.version + ' - ' + new Date().toString() + '\n' +
                 ' * Copyright (c) ' + new Date().getFullYear() + ' Environmental Systems Research Institute, Inc.\n' +
-                ' * ' + pkg.license + ' */';
+                ' * @license ' + pkg.license + '\n'+
+                ' */';
 
 rollup({
   entry: path.resolve(entryFile),
-  external: ['leaflet']
+  external: ['leaflet'],
+  plugins: [
+    json(),
+    npm({
+      jsnext: true
+    })
+  ]
 }).then(function (bundle) {
   var transpiled = bundle.generate({
     format: 'umd',
     sourceMap: true,
-    sourceMapFile: pkg.name + '.js',
-    moduleName: 'L.esri'
+    sourceMapFile: pkg.name + '.js.map',
+    moduleName: 'L.esri',
+    banner: copyright,
+    globals: {
+      'leaflet': 'L'
+    }
   });
 
   var sourceMap = UglifyJS.SourceMap({
@@ -29,7 +43,7 @@ rollup({
   });
 
   var stream = UglifyJS.OutputStream({
-    preamble: copyright,
+    comments: /@license/g,
     source_map: sourceMap
   });
 

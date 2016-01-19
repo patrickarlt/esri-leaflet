@@ -1,4 +1,5 @@
 export { version as VERSION } from '../package.json';
+
 // import base
 export { Support } from './Support';
 export { Util } from './Util';
